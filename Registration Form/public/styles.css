@@ -1,0 +1,150 @@
+:root {
+    --primary-bg: #f5f5f5; /* Light gray for the container background */
+    --secondary-bg: #ff6f61; /* Coral red */
+    --tertiary-bg: #4ecdc4; /* Caribbean green */
+    --quaternary-bg: #f7fff7; /* Mint cream */
+    --primary-font: 'Arial', sans-serif;
+    --input-bg: #ffffff; /* White */
+    --input-shadow: #d3d3d3; /* Light gray shadow */
+    --text-color: #333333; /* Dark gray */
+    --placeholder-color: #777777; /* Gray */
+    --button-bg: #3498db; /* Blue */
+    --button-color: #ffffff; /* White */
+    --body-bg: linear-gradient(135deg, #ecf0f1 0%, #ffffff 100%); /* Gradient background */
+    --box-shadow: 0 0 1em rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--body-bg);
+    height: 100vh;
+}
+
+.screen-1 {
+    background: var(--primary-bg);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    gap: 1em;
+    align-items: center;
+    position: relative; /* Add position relative */
+    overflow: hidden; /* Hide overflow to contain decorative elements */
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Add decorative elements */
+.screen-1:before {
+    content: '';
+    position: absolute;
+    top: -20px; /* Adjust position */
+    left: -20px; /* Adjust position */
+    right: -20px; /* Adjust position */
+    bottom: -20px; /* Adjust position */
+    background: var(--tertiary-bg); /* Caribbean green */
+    z-index: -1;
+    transform: rotate(45deg); /* Rotate */
+}
+
+.screen-1:after {
+    content: '';
+    position: absolute;
+    top: -20px; /* Adjust position */
+    left: -20px; /* Adjust position */
+    right: -20px; /* Adjust position */
+    bottom: -20px; /* Adjust position */
+    background: var(--secondary-bg); /* Coral red */
+    z-index: -1;
+    transform: rotate(-45deg); /* Rotate */
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--secondary-bg);
+    margin-bottom: 1em;
+}
+
+.input-group {
+    background: var(--input-bg);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border-radius: 10px;
+    width: 100%;
+}
+
+input {
+    outline: none;
+    border: none;
+    padding: 0.5em;
+    font-size: 1em;
+    border-radius: 5px;
+    color: var(--text-color);
+    box-shadow: inset 0 0 0.5em var(--input-shadow);
+}
+
+input::placeholder {
+    color: var(--placeholder-color);
+    font-size: 0.9em;
+}
+
+button.login {
+    padding: 0.8em;
+    background: var(--button-bg);
+    color: var(--button-color);
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+#successMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--secondary-bg);
+    margin-top: 1em;
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.checkmark {
+    width: 40px;
+    height: 40px;
+    margin: 1em 0;
+}
+
+.checkmark__circle {
+    stroke: var(--secondary-bg);
+    stroke-width: 2;
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark__check {
+    stroke: var(--secondary-bg);
+    stroke-width: 2;
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.3s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
