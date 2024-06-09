@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  background: #3498db;
+  color: #fff;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Center Form Container */
+.form-container {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Center Home Container */
+.home-container {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Blog Posts */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.posts-list {
+  padding: 0;
+}
+
+.post-item {
+  margin: 20px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  border: none;
+  border-radius: 10px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-item:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.post-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.post-content {
+  margin-top: 10px;
+  color: #fff;
+}
+
+.edit-link {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.edit-link:hover {
+  background-color: #2980b9;
+}
+
+/* New Post Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #3498db;
+}
+
+form input[type="text"],
+form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
